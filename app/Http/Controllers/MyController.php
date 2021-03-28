@@ -20,15 +20,15 @@ class MyController extends Controller
     /**
     * @return \Illuminate\Support\Collection
     */
-    public function export() 
-    {
-        return Excel::download(new UsersExport, 'users.xlsx');
-    }
+    // public function export() 
+    // {
+    //     return Excel::download(new UsersExport, 'users.xlsx');
+    // }
    
-    /**
-    * @return \Illuminate\Support\Collection
-    */
-    public function import() 
+    // /**
+    // * @return \Illuminate\Support\Collection
+    // */
+    public function import_csv() 
     {
         Excel::import(new UsersImport,request()->file('file'));
            
